@@ -1,15 +1,10 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# CTM Code Challenge
 
 Things you may want to cover:
 
-* Ruby version
+* Rails version
 
-* System dependencies
-
-* Configuration
+Rails 6.1.3.1
 
 * Database creation
 
@@ -20,5 +15,3 @@ Things you may want to cover:
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
-
-* ...
