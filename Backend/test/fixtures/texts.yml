@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  body: MyString
+  sid: MyString
+  date_created: MyString
+  date_updated: MyString
+  account_sid: MyString
+  messaging_service_sid: MyString
+
+two:
+  body: MyString
+  sid: MyString
+  date_created: MyString
+  date_updated: MyString
+  account_sid: MyString
+  messaging_service_sid: MyString
