@@ -14,11 +14,11 @@ ActiveRecord::Schema.define(version: 2021_04_27_212114) do
 
   create_table "texts", force: :cascade do |t|
     t.string "body"
-    t.string "sid"
-    t.string "date_created"
-    t.string "date_updated"
-    t.string "account_sid"
     t.string "messaging_service_sid"
+    t.string "to"
+    t.string "direction"
+    t.string "sid"
+    t.string "account_sid"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
