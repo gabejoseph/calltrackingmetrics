@@ -42,7 +42,7 @@ class TextsController < ApplicationController
 
   # Twilio Webhook
 
-  def twilio_webhook(body)
+  def twilio_webhook
     binding.pry
     @text = Text.new(body)
 

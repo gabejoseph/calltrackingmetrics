@@ -243,3 +243,53 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 24ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 1690)
 
 
+Started POST "/" for 3.81.147.186 at 2021-04-28 09:17:28 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [POST] "/"):
+  
+Started POST "/" for 54.81.87.58 at 2021-04-28 09:17:28 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/"):
+  
+Started POST "/" for 34.233.136.118 at 2021-04-28 09:33:21 -0400
+Processing by TextsController#twilio_webhook as */*
+  Parameters: {"ToCountry"=>"US", "ToState"=>"AL", "SmsMessageSid"=>"SMaba0cc244fe697cc0e511aba42978214", "NumMedia"=>"0", "ToCity"=>"BIRMINGHAM", "FromZip"=>"07105", "SmsSid"=>"SMaba0cc244fe697cc0e511aba42978214", "FromState"=>"NJ", "SmsStatus"=>"received", "FromCity"=>"NEWARK", "Body"=>"Test text 5", "FromCountry"=>"US", "To"=>"+12057079943", "MessagingServiceSid"=>"MG2f65a05d6a745327179eb876a2e130fe", "ToZip"=>"35203", "NumSegments"=>"1", "MessageSid"=>"SMaba0cc244fe697cc0e511aba42978214", "AccountSid"=>"AC1d680d7cf7bbc779eb15ded8a720a71b", "From"=>"+19737044721", "ApiVersion"=>"2010-04-01"}
+Completed 500 Internal Server Error in 4ms (Allocations: 3118)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/texts_controller.rb:45:in `twilio_webhook'
+Started POST "/" for 34.229.198.222 at 2021-04-28 09:33:22 -0400
+Processing by TextsController#twilio_webhook as */*
+  Parameters: {"ToCountry"=>"US", "ErrorUrl"=>"http://calltrackingmetrics.ngrok.io", "ToState"=>"AL", "SmsMessageSid"=>"SMaba0cc244fe697cc0e511aba42978214", "ErrorCode"=>"11200", "NumMedia"=>"0", "ToCity"=>"BIRMINGHAM", "FromZip"=>"07105", "SmsSid"=>"SMaba0cc244fe697cc0e511aba42978214", "FromState"=>"NJ", "SmsStatus"=>"received", "FromCity"=>"NEWARK", "Body"=>"Test text 5", "FromCountry"=>"US", "To"=>"+12057079943", "MessagingServiceSid"=>"MG2f65a05d6a745327179eb876a2e130fe", "ToZip"=>"35203", "NumSegments"=>"1", "MessageSid"=>"SMaba0cc244fe697cc0e511aba42978214", "AccountSid"=>"AC1d680d7cf7bbc779eb15ded8a720a71b", "From"=>"+19737044721", "ApiVersion"=>"2010-04-01"}
+Completed 500 Internal Server Error in 1ms (Allocations: 97)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/texts_controller.rb:45:in `twilio_webhook'
+Started POST "/" for 52.55.214.137 at 2021-04-28 09:34:23 -0400
+Processing by TextsController#twilio_webhook as */*
+  Parameters: {"ToCountry"=>"US", "ToState"=>"AL", "SmsMessageSid"=>"SM42398ab39d28e9d761edb44f45bf83dc", "NumMedia"=>"0", "ToCity"=>"BIRMINGHAM", "FromZip"=>"07105", "SmsSid"=>"SM42398ab39d28e9d761edb44f45bf83dc", "FromState"=>"NJ", "SmsStatus"=>"received", "FromCity"=>"NEWARK", "Body"=>"Test text 6", "FromCountry"=>"US", "To"=>"+12057079943", "MessagingServiceSid"=>"MG2f65a05d6a745327179eb876a2e130fe", "ToZip"=>"35203", "NumSegments"=>"1", "MessageSid"=>"SM42398ab39d28e9d761edb44f45bf83dc", "AccountSid"=>"AC1d680d7cf7bbc779eb15ded8a720a71b", "From"=>"+19737044721", "ApiVersion"=>"2010-04-01"}
+Started POST "/" for 3.90.33.143 at 2021-04-28 09:34:38 -0400
+Completed 500 Internal Server Error in 60037ms (Allocations: 16676)
+
+
+  
+NameError (undefined local variable or method `body' for #<TextsController:0x007fa6ff6e3450>):
+  
+app/controllers/texts_controller.rb:47:in `twilio_webhook'
+Processing by TextsController#twilio_webhook as */*
+  Parameters: {"ToCountry"=>"US", "ErrorUrl"=>"http://calltrackingmetrics.ngrok.io", "ToState"=>"AL", "SmsMessageSid"=>"SM42398ab39d28e9d761edb44f45bf83dc", "ErrorCode"=>"11200", "NumMedia"=>"0", "ToCity"=>"BIRMINGHAM", "FromZip"=>"07105", "SmsSid"=>"SM42398ab39d28e9d761edb44f45bf83dc", "FromState"=>"NJ", "SmsStatus"=>"received", "FromCity"=>"NEWARK", "Body"=>"Test text 6", "FromCountry"=>"US", "To"=>"+12057079943", "MessagingServiceSid"=>"MG2f65a05d6a745327179eb876a2e130fe", "ToZip"=>"35203", "NumSegments"=>"1", "MessageSid"=>"SM42398ab39d28e9d761edb44f45bf83dc", "AccountSid"=>"AC1d680d7cf7bbc779eb15ded8a720a71b", "From"=>"+19737044721", "ApiVersion"=>"2010-04-01"}
+Completed 500 Internal Server Error in 1929ms (Allocations: 6010)
+
+
+  
+NameError (undefined local variable or method `body' for #<TextsController:0x007fa700387f80>):
+  
+app/controllers/texts_controller.rb:47:in `twilio_webhook'
