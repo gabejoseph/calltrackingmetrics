@@ -46,6 +46,6 @@ class TextsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def text_params
-      params.require(:text).permit(:body, :sid, :date_created, :date_updated, :account_sid, :messaging_service_sid)
+      params.require(:text).permit(:body, :sid, :account_sid, :messaging_service_sid)
     end
 end

@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 2021_04_27_212114) do
     t.string "body"
     t.string "messaging_service_sid"
     t.string "to"
+    t.string "from"
     t.string "direction"
     t.string "sid"
     t.string "account_sid"

@@ -4,6 +4,7 @@ class CreateTexts < ActiveRecord::Migration[6.1]
       t.string :body
       t.string :messaging_service_sid
       t.string :to
+      t.string :from
       t.string :direction
       t.string :sid
       t.string :account_sid
