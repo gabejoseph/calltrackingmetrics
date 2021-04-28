@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :texts
   resources :users
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  post 'twilio_webhook', to: 'texts#twilio_webhook'
   
 end

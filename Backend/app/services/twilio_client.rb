@@ -5,6 +5,10 @@ class TwilioClient
         @client = Twilio::REST::Client.new account_sid, auth_token
     end
 
+    def list_texts
+        @client.messages.list(limit:20)
+    end
+
     def send_text(user, message)
         client.messages.create(
             to: user.phone,
@@ -28,3 +32,4 @@ class TwilioClient
         end
 
 end
+

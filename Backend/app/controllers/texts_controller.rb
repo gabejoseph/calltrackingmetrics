@@ -1,3 +1,5 @@
+require 'pry'
+
 class TextsController < ApplicationController
   before_action :set_text, only: [:show, :update, :destroy]
 
@@ -37,6 +39,20 @@ class TextsController < ApplicationController
   def destroy
     @text.destroy
   end
+
+  # Twilio Webhook
+
+  def twilio_webhook(body)
+    binding.pry
+    @text = Text.new(body)
+
+    if @text.save
+      render json: @text, status: :created, location: @text
+    else
+      render json: @text.errors, status: :unprocessable_entity
+    end
+
+  end 
 
   private
     # Use callbacks to share common setup or constraints between actions.
