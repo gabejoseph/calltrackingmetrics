@@ -2,7 +2,8 @@ Rails.application.routes.draw do
   resources :texts
   resources :users
 
-  post '/', to: 'texts#twilio_webhook'
+  get '/', to: 'texts#index'
+  post '/', to: 'texts#create'
 
   resources :sessions, only: [:create]
   resources :registrations, only: [:create]

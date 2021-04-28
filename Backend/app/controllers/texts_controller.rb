@@ -17,13 +17,26 @@ class TextsController < ApplicationController
 
   # POST /texts
   def create
-    @text = Text.new(text_params)
+
+    TwilioClient.new.send_text(session[:phone], message)
+
+    @text = Text.new(
+      body: params['Body'],
+      sid: params['SMSMessageSid'],
+      account_sid: params['AccountSid'],
+      messaging_service_sid: params['MessagingServiceSid'], 
+      to: params['To'],
+      from: params['From'],
+      direction: params['Incoming'], 
+      user_id: params['user_id']
+    )
 
     if @text.save
       render json: @text, status: :created, location: @text
     else
       render json: @text.errors, status: :unprocessable_entity
     end
+
   end
 
   # PATCH/PUT /texts/1
@@ -39,28 +52,6 @@ class TextsController < ApplicationController
   def destroy
     @text.destroy
   end
-
-  # Twilio Webhook
-
-  def twilio_webhook
-    @text = Text.new(
-      body: params['Body'],
-      sid: params['SMSMessageSid'],
-      account_sid: params['AccountSid'],
-      messaging_service_sid: params['MessagingServiceSid'], 
-      to: params['To'],
-      from: params['From'],
-      direction: params['Incoming'], 
-      user_id: '1'
-    )
-
-    if @text.save
-      render json: @text, status: :created, location: @text
-    else
-      render json: @text.errors, status: :unprocessable_entity
-    end
-
-  end 
 
   private
     # Use callbacks to share common setup or constraints between actions.

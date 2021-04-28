@@ -1,7 +1,6 @@
 class RegistrationsController < ApplicationController
 
     def create 
-        binding.pry
         user = User.create(
             name: params[:name],
             email: params[:email],

@@ -1,3 +1,5 @@
+require 'pry'
+
 class TwilioClient
     attr_reader :client
     
@@ -6,7 +8,7 @@ class TwilioClient
     end
 
     def list_texts
-        @client.messages.list(limit:20)
+        @client.messages.list
     end
 
     def send_text(user, message)
