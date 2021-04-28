@@ -498,3 +498,106 @@ Completed 200 OK in 238960ms (Views: 0.3ms | ActiveRecord: 2.3ms | Allocations: 
 
   [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started POST "/sessions" for ::1 at 2021-04-28 14:02:27 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"james@email.com", "password"=>"[FILTERED]", "session"=>{"email"=>"james@email.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "james@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Completed 200 OK in 2941ms (Views: 0.3ms | ActiveRecord: 0.9ms | Allocations: 14781)
+
+
+Started POST "/registrations" for ::1 at 2021-04-28 14:02:56 -0400
+Started POST "/sessions" for ::1 at 2021-04-28 14:02:56 -0400
+Processing by RegistrationsController#create as JSON
+  Parameters: {"name"=>"gabriel", "email"=>"gabe@gmail.com", "username"=>"gabe", "password"=>"[FILTERED]", "phone"=>"snkefbwaobfi", "registration"=>{"name"=>"gabriel", "email"=>"gabe@gmail.com", "username"=>"gabe", "password"=>"[FILTERED]", "phone"=>"snkefbwaobfi"}}
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"gabe", "password"=>"[FILTERED]", "session"=>{"email"=>"gabe", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gabe"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Completed 200 OK in 4140ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 10748)
+
+
+Started POST "/sessions" for ::1 at 2021-04-28 14:03:08 -0400
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"gabe@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"gabe@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gabe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Completed 200 OK in 2295ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 7134)
+
+
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/registrations_controller.rb:5:in `create'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "username", "email", "password_digest", "phone", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "gabriel"], ["username", "gabe"], ["email", "gabe@gmail.com"], ["password_digest", "$2a$12$p7.nlw7wyYZ4Wsbni/zDj.vnHcSRcIvm/So.DbZtY3QmvJBuW5Lni"], ["phone", "snkefbwaobfi"], ["created_at", "2021-04-28 18:05:45.773843"], ["updated_at", "2021-04-28 18:05:45.773843"]]
+  ↳ app/controllers/registrations_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/registrations_controller.rb:5:in `create'
+Completed 200 OK in 169420ms (Views: 0.4ms | ActiveRecord: 2.4ms | Allocations: 30914)
+
+
+Started POST "/sessions" for ::1 at 2021-04-28 14:06:15 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"gabe@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"gabe@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gabe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 200 OK in 300ms (Views: 0.5ms | ActiveRecord: 0.8ms | Allocations: 9727)
+
+
+Started POST "/sessions" for ::1 at 2021-04-28 14:07:02 -0400
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"gabe@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"gabe@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gabe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 200 OK in 283ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 728)
+
+
+Started POST "/sessions" for ::1 at 2021-04-28 14:08:35 -0400
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"gabe@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"gabe@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gabe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 200 OK in 345ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 714)
+
+
+Started POST "/sessions" for ::1 at 2021-04-28 14:09:26 -0400
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"gabe@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"gabe@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gabe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 200 OK in 283ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 713)
+
+
+Started GET "/users" for ::1 at 2021-04-28 14:17:15 -0400
+Processing by UsersController#index as */*
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.9ms | Allocations: 2173)
+
+
+Started POST "/sessions" for ::1 at 2021-04-28 14:17:39 -0400
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"gabe@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"gabe@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gabe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 200 OK in 302ms (Views: 0.5ms | ActiveRecord: 0.4ms | Allocations: 732)
+
+
+Started GET "/users" for ::1 at 2021-04-28 14:17:39 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.2ms | Allocations: 1536)
+
+
+Started GET "/users" for ::1 at 2021-04-28 14:17:40 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.2ms | Allocations: 1536)
+
+
