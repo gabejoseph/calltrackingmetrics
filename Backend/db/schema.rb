@@ -20,8 +20,10 @@ ActiveRecord::Schema.define(version: 2021_04_27_212114) do
     t.string "direction"
     t.string "sid"
     t.string "account_sid"
+    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_texts_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

@@ -8,6 +8,7 @@ class CreateTexts < ActiveRecord::Migration[6.1]
       t.string :direction
       t.string :sid
       t.string :account_sid
+      t.belongs_to :user
 
       t.timestamps
     end

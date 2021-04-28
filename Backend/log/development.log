@@ -293,3 +293,117 @@ Completed 500 Internal Server Error in 1929ms (Allocations: 6010)
 NameError (undefined local variable or method `body' for #<TextsController:0x007fa700387f80>):
   
 app/controllers/texts_controller.rb:47:in `twilio_webhook'
+Started POST "/" for 54.81.5.34 at 2021-04-28 10:24:51 -0400
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TextsController#twilio_webhook as */*
+  Parameters: {"ToCountry"=>"US", "ToState"=>"AL", "SmsMessageSid"=>"SM0d8f733d35fa370e190882b4264937c7", "NumMedia"=>"0", "ToCity"=>"BIRMINGHAM", "FromZip"=>"07105", "SmsSid"=>"SM0d8f733d35fa370e190882b4264937c7", "FromState"=>"NJ", "SmsStatus"=>"received", "FromCity"=>"NEWARK", "Body"=>"Test text 7", "FromCountry"=>"US", "To"=>"+12057079943", "MessagingServiceSid"=>"MG2f65a05d6a745327179eb876a2e130fe", "ToZip"=>"35203", "NumSegments"=>"1", "MessageSid"=>"SM0d8f733d35fa370e190882b4264937c7", "AccountSid"=>"AC1d680d7cf7bbc779eb15ded8a720a71b", "From"=>"+19737044721", "ApiVersion"=>"2010-04-01"}
+Started POST "/" for 3.89.25.219 at 2021-04-28 10:25:05 -0400
+Processing by TextsController#twilio_webhook as */*
+  Parameters: {"ToCountry"=>"US", "ErrorUrl"=>"http://calltrackingmetrics.ngrok.io", "ToState"=>"AL", "SmsMessageSid"=>"SM0d8f733d35fa370e190882b4264937c7", "ErrorCode"=>"11200", "NumMedia"=>"0", "ToCity"=>"BIRMINGHAM", "FromZip"=>"07105", "SmsSid"=>"SM0d8f733d35fa370e190882b4264937c7", "FromState"=>"NJ", "SmsStatus"=>"received", "FromCity"=>"NEWARK", "Body"=>"Test text 7", "FromCountry"=>"US", "To"=>"+12057079943", "MessagingServiceSid"=>"MG2f65a05d6a745327179eb876a2e130fe", "ToZip"=>"35203", "NumSegments"=>"1", "MessageSid"=>"SM0d8f733d35fa370e190882b4264937c7", "AccountSid"=>"AC1d680d7cf7bbc779eb15ded8a720a71b", "From"=>"+19737044721", "ApiVersion"=>"2010-04-01"}
+Completed 500 Internal Server Error in 974375ms (ActiveRecord: 0.0ms | Allocations: 30822)
+
+
+  
+NameError (undefined local variable or method `body' for #<TextsController:0x007f928718ff30>):
+  
+app/controllers/texts_controller.rb:47:in `twilio_webhook'
+Completed 500 Internal Server Error in 1057015ms (ActiveRecord: 0.0ms | Allocations: 57530)
+
+
+  
+NameError (undefined local variable or method `body' for #<TextsController:0x007f928cbe42d8>):
+  
+app/controllers/texts_controller.rb:47:in `twilio_webhook'
+Started POST "/" for 34.205.73.137 at 2021-04-28 10:42:42 -0400
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TextsController#twilio_webhook as */*
+  Parameters: {"ToCountry"=>"US", "ToState"=>"AL", "SmsMessageSid"=>"SM07a32e183f5f9648226e2cc671fc4d6c", "NumMedia"=>"0", "ToCity"=>"BIRMINGHAM", "FromZip"=>"07105", "SmsSid"=>"SM07a32e183f5f9648226e2cc671fc4d6c", "FromState"=>"NJ", "SmsStatus"=>"received", "FromCity"=>"NEWARK", "Body"=>"Test text 9", "FromCountry"=>"US", "To"=>"+12057079943", "MessagingServiceSid"=>"MG2f65a05d6a745327179eb876a2e130fe", "ToZip"=>"35203", "NumSegments"=>"1", "MessageSid"=>"SM07a32e183f5f9648226e2cc671fc4d6c", "AccountSid"=>"AC1d680d7cf7bbc779eb15ded8a720a71b", "From"=>"+19737044721", "ApiVersion"=>"2010-04-01"}
+Started POST "/" for 54.209.35.146 at 2021-04-28 10:42:57 -0400
+Processing by TextsController#twilio_webhook as */*
+  Parameters: {"ToCountry"=>"US", "ErrorUrl"=>"http://calltrackingmetrics.ngrok.io", "ToState"=>"AL", "SmsMessageSid"=>"SM07a32e183f5f9648226e2cc671fc4d6c", "ErrorCode"=>"11200", "NumMedia"=>"0", "ToCity"=>"BIRMINGHAM", "FromZip"=>"07105", "SmsSid"=>"SM07a32e183f5f9648226e2cc671fc4d6c", "FromState"=>"NJ", "SmsStatus"=>"received", "FromCity"=>"NEWARK", "Body"=>"Test text 9", "FromCountry"=>"US", "To"=>"+12057079943", "MessagingServiceSid"=>"MG2f65a05d6a745327179eb876a2e130fe", "ToZip"=>"35203", "NumSegments"=>"1", "MessageSid"=>"SM07a32e183f5f9648226e2cc671fc4d6c", "AccountSid"=>"AC1d680d7cf7bbc779eb15ded8a720a71b", "From"=>"+19737044721", "ApiVersion"=>"2010-04-01"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/texts_controller.rb:47:in `twilio_webhook'
+Completed 422 Unprocessable Entity in 185158ms (Views: 31.2ms | ActiveRecord: 1.0ms | Allocations: 94348)
+
+
+Completed 422 Unprocessable Entity in 232003ms (Views: 1.4ms | ActiveRecord: 0.0ms | Allocations: 132785)
+
+
+Started POST "/" for 100.26.36.16 at 2021-04-28 10:46:52 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TextsController#twilio_webhook as */*
+  Parameters: {"ToCountry"=>"US", "ToState"=>"AL", "SmsMessageSid"=>"SM5aa3e4bf6e7911aedaa3703b98755649", "NumMedia"=>"0", "ToCity"=>"BIRMINGHAM", "FromZip"=>"07105", "SmsSid"=>"SM5aa3e4bf6e7911aedaa3703b98755649", "FromState"=>"NJ", "SmsStatus"=>"received", "FromCity"=>"NEWARK", "Body"=>"Test text 10", "FromCountry"=>"US", "To"=>"+12057079943", "MessagingServiceSid"=>"MG2f65a05d6a745327179eb876a2e130fe", "ToZip"=>"35203", "NumSegments"=>"1", "MessageSid"=>"SM5aa3e4bf6e7911aedaa3703b98755649", "AccountSid"=>"AC1d680d7cf7bbc779eb15ded8a720a71b", "From"=>"+19737044721", "ApiVersion"=>"2010-04-01"}
+Completed 422 Unprocessable Entity in 31ms (Views: 4.0ms | ActiveRecord: 0.6ms | Allocations: 15540)
+
+
+Started POST "/" for 54.83.127.128 at 2021-04-28 10:46:52 -0400
+Processing by TextsController#twilio_webhook as */*
+  Parameters: {"ToCountry"=>"US", "ErrorUrl"=>"http://calltrackingmetrics.ngrok.io", "ToState"=>"AL", "SmsMessageSid"=>"SM5aa3e4bf6e7911aedaa3703b98755649", "ErrorCode"=>"11200", "NumMedia"=>"0", "ToCity"=>"BIRMINGHAM", "FromZip"=>"07105", "SmsSid"=>"SM5aa3e4bf6e7911aedaa3703b98755649", "FromState"=>"NJ", "SmsStatus"=>"received", "FromCity"=>"NEWARK", "Body"=>"Test text 10", "FromCountry"=>"US", "To"=>"+12057079943", "MessagingServiceSid"=>"MG2f65a05d6a745327179eb876a2e130fe", "ToZip"=>"35203", "NumSegments"=>"1", "MessageSid"=>"SM5aa3e4bf6e7911aedaa3703b98755649", "AccountSid"=>"AC1d680d7cf7bbc779eb15ded8a720a71b", "From"=>"+19737044721", "ApiVersion"=>"2010-04-01"}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 589)
+
+
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20210427211731)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "username" varchar, "email" varchar, "password_digest" varchar, "phone" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210427211731"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateTexts (20210427212114)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "texts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "body" varchar, "messaging_service_sid" varchar, "to" varchar, "from" varchar, "direction" varchar, "sid" varchar, "account_sid" varchar, "user_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_texts_on_user_id" ON "texts" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210427212114"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-04-28 14:56:30.833986"], ["updated_at", "2021-04-28 14:56:30.833986"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "odnaiw"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "odnaiw"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "odnaiw"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "username", "password_digest", "phone", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "oasidn"], ["username", "odnaiw"], ["password_digest", "$2a$12$3bZsR0Ch9X9fgZFyTq2CuehvfeTFmEM.8bEezunBsThKESgszKHCK"], ["phone", "oaidnw"], ["created_at", "2021-04-28 15:13:29.882991"], ["updated_at", "2021-04-28 15:13:29.882991"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mText Create (1.0ms)[0m  [1m[32mINSERT INTO "texts" ("body", "messaging_service_sid", "to", "from", "direction", "sid", "account_sid", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["body", "Body"], ["messaging_service_sid", "MessagingServiceSid"], ["to", "To"], ["from", "From"], ["direction", "Incoming"], ["sid", "SMSMessageSid"], ["account_sid", "AccountSid"], ["user_id", 1], ["created_at", "2021-04-28 15:20:08.584904"], ["updated_at", "2021-04-28 15:20:08.584904"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "username", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "asdadsaw"], ["username", "aodinwn"], ["email", "aodiffawfnwn"], ["password_digest", "$2a$12$0d9btqsa5/YZ8zlHiSyy9O52NLr.49rsWa.12rgRlL5eUMx0Qp4Tq"], ["created_at", "2021-04-28 15:27:10.242969"], ["updated_at", "2021-04-28 15:27:10.242969"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "username", "email", "password_digest", "phone", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "asdadsaw"], ["username", "aodinwn"], ["email", "aodiffawfnwn"], ["password_digest", "$2a$12$aWJrOhRtdGHkrl8H6F9wU.m4Lm6ZAgyuh/vP5QSoHvm6oJGMMcAcm"], ["phone", "afawffawfnwn"], ["created_at", "2021-04-28 15:28:38.393856"], ["updated_at", "2021-04-28 15:28:38.393856"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[36mcommit transaction[0m
