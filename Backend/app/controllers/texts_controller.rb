@@ -5,8 +5,8 @@ class TextsController < ApplicationController
 
   # GET /texts
   def index
-    @texts = Text.all
-
+    phone = Rails.application.credentials.twilio[:phone_number].to_s.prepend("+")
+    @texts = Text.where(to: phone).or(Text.where(from: phone))
     render json: @texts
   end
 
