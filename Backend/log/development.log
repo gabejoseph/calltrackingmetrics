@@ -4636,3 +4636,96 @@ Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.2ms | Allocations: 2800)
   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
   [1m[36mText Create (0.7ms)[0m  [1m[32mINSERT INTO "texts" ("body", "to", "from", "direction", "sid", "account_sid", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["body", "oaidbw"], ["to", "19737044721"], ["from", "19737044721"], ["direction", "oaidbw"], ["sid", "oaidbw"], ["account_sid", "oaidbw"], ["user_id", 1], ["created_at", "2021-04-29 19:56:03.592324"], ["updated_at", "2021-04-29 19:56:03.592324"]]
   [1m[36mTRANSACTION (1.6ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for ::1 at 2021-04-29 16:28:03 -0400
+  
+LoadError (cannot load such file -- /Users/gabrieljoseph/Projects/calltrackingmetrics/backend/config/routes.rb):
+  
+bootsnap (1.7.4) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:59:in `load'
+bootsnap (1.7.4) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:59:in `load'
+railties (6.1.3.1) lib/rails/application/routes_reloader.rb:47:in `block in load_paths'
+railties (6.1.3.1) lib/rails/application/routes_reloader.rb:47:in `each'
+railties (6.1.3.1) lib/rails/application/routes_reloader.rb:47:in `load_paths'
+railties (6.1.3.1) lib/rails/application/routes_reloader.rb:21:in `reload!'
+railties (6.1.3.1) lib/rails/application/routes_reloader.rb:35:in `block in updater'
+activesupport (6.1.3.1) lib/active_support/file_update_checker.rb:83:in `execute'
+railties (6.1.3.1) lib/rails/application/routes_reloader.rb:10:in `execute'
+railties (6.1.3.1) lib/rails/application/finisher.rb:208:in `block (2 levels) in <module:Finisher>'
+activesupport (6.1.3.1) lib/active_support/callbacks.rb:427:in `instance_exec'
+activesupport (6.1.3.1) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.3.1) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+activesupport (6.1.3.1) lib/active_support/callbacks.rb:604:in `block (2 levels) in default_terminator'
+activesupport (6.1.3.1) lib/active_support/callbacks.rb:603:in `catch'
+activesupport (6.1.3.1) lib/active_support/callbacks.rb:603:in `block in default_terminator'
+activesupport (6.1.3.1) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (6.1.3.1) lib/active_support/callbacks.rb:512:in `block in invoke_before'
+activesupport (6.1.3.1) lib/active_support/callbacks.rb:512:in `each'
+activesupport (6.1.3.1) lib/active_support/callbacks.rb:512:in `invoke_before'
+activesupport (6.1.3.1) lib/active_support/callbacks.rb:105:in `run_callbacks'
+activesupport (6.1.3.1) lib/active_support/execution_wrapper.rb:111:in `run!'
+activesupport (6.1.3.1) lib/active_support/reloader.rb:114:in `run!'
+activesupport (6.1.3.1) lib/active_support/execution_wrapper.rb:73:in `block in run!'
+activesupport (6.1.3.1) lib/active_support/execution_wrapper.rb:70:in `tap'
+activesupport (6.1.3.1) lib/active_support/execution_wrapper.rb:70:in `run!'
+activesupport (6.1.3.1) lib/active_support/reloader.rb:63:in `run!'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.3.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.3.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.3.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.3.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.3.1) lib/rails/engine.rb:539:in `call'
+puma (5.2.2) lib/puma/configuration.rb:248:in `call'
+puma (5.2.2) lib/puma/request.rb:76:in `block in handle_request'
+puma (5.2.2) lib/puma/thread_pool.rb:337:in `with_force_shutdown'
+puma (5.2.2) lib/puma/request.rb:75:in `handle_request'
+puma (5.2.2) lib/puma/server.rb:431:in `process_client'
+puma (5.2.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/" for ::1 at 2021-04-29 16:30:48 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+Started POST "/" for ::1 at 2021-04-29 16:31:00 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/"):
+  
+Started GET "/" for ::1 at 2021-04-29 16:31:01 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+Started POST "/sessions" for ::1 at 2021-04-29 16:35:30 -0400
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"gabe@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"gabe@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gabe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Started GET "/" for ::1 at 2021-04-29 16:35:31 -0400
+Completed 200 OK in 300ms (Views: 0.4ms | ActiveRecord: 1.5ms | Allocations: 9842)
+
+
+Processing by TextsController#index as */*
+  [1m[36mText Load (1.2ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE ("texts"."to" = ? OR "texts"."from" = ?)[0m  [["to", "+12057079943"], ["from", "+12057079943"]]
+  ↳ app/controllers/texts_controller.rb:10:in `index'
+Completed 200 OK in 34ms (Views: 13.1ms | ActiveRecord: 2.6ms | Allocations: 10199)
+
+
+Started GET "/" for ::1 at 2021-04-29 16:35:31 -0400
+Processing by TextsController#index as */*
+  [1m[36mText Load (0.2ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE ("texts"."to" = ? OR "texts"."from" = ?)[0m  [["to", "+12057079943"], ["from", "+12057079943"]]
+  ↳ app/controllers/texts_controller.rb:10:in `index'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.2ms | Allocations: 2800)
+
+
