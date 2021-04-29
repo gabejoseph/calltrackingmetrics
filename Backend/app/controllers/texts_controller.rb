@@ -17,9 +17,7 @@ class TextsController < ApplicationController
 
   # POST /texts
   def create
-
     if params['SmsStatus'] == "received"
-      binding.pry
       @text = Text.new(
         body: params['Body'],
         sid: params['SmsSid'],
@@ -28,11 +26,10 @@ class TextsController < ApplicationController
         to: params['To'],
         from: params['From'],
         direction: 'Incoming', 
-        user_id: ['To']
+        user_id: User.find_by(phone: params['To'].remove("+")).id
       )
     else
       response = TwilioClient.new.send_text(params[:phone], params[:body])
-      binding.pry
       @text = Text.new(
         body: params[:body],
         sid: response.sid,
@@ -41,7 +38,7 @@ class TextsController < ApplicationController
         to: response.to,
         from: response.from,
         direction: response.direction, 
-        user_id: response.from
+        user_id: params[:user]
       )
     end 
 

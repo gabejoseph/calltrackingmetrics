@@ -1761,3 +1761,498 @@ Processing by TextsController#create as JSON
 Completed 422 Unprocessable Entity in 139033ms (Views: 5.2ms | ActiveRecord: 2.4ms | Allocations: 42393)
 
 
+Started POST "/sessions" for ::1 at 2021-04-29 08:24:49 -0400
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"gabe@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"gabe@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gabe@gmail.com"], ["LIMIT", 1]]
+Started GET "/users" for ::1 at 2021-04-29 08:24:49 -0400
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 200 OK in 19ms (Views: 0.3ms | ActiveRecord: 1.0ms | Allocations: 5294)
+
+
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms | Allocations: 775)
+
+
+Started GET "/users" for ::1 at 2021-04-29 08:24:49 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 587)
+
+
+Started POST "/sessions" for ::1 at 2021-04-29 08:33:38 -0400
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/users" for ::1 at 2021-04-29 08:33:38 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"gabe@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"gabe@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gabe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Processing by UsersController#index as */*
+Completed 200 OK in 14ms (Views: 0.2ms | ActiveRecord: 0.9ms | Allocations: 4728)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 7.8ms | ActiveRecord: 0.8ms | Allocations: 1905)
+
+
+Started GET "/users" for ::1 at 2021-04-29 08:33:38 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.1ms | Allocations: 605)
+
+
+Started GET "/users" for ::1 at 2021-04-29 08:35:28 -0400
+Processing by UsersController#index as */*
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 4.1ms | ActiveRecord: 0.8ms | Allocations: 1613)
+
+
+Started GET "/users" for ::1 at 2021-04-29 08:38:29 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.1ms | Allocations: 587)
+
+
+Started GET "/" for ::1 at 2021-04-29 08:41:06 -0400
+Processing by TextsController#index as HTML
+  [1m[36mText Load (0.7ms)[0m  [1m[34mSELECT "texts".* FROM "texts"[0m
+  ↳ app/controllers/texts_controller.rb:10:in `index'
+Completed 200 OK in 10ms (Views: 1.7ms | ActiveRecord: 0.7ms | Allocations: 1684)
+
+
+Started GET "/favicon.ico" for ::1 at 2021-04-29 08:41:06 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started POST "/sessions" for ::1 at 2021-04-29 08:42:00 -0400
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"gabe@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"gabe@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gabe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 1.1ms | Allocations: 1255)
+
+
+Started GET "/users" for ::1 at 2021-04-29 08:42:00 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.3ms | Allocations: 587)
+
+
+Started GET "/users" for ::1 at 2021-04-29 08:42:00 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.1ms | Allocations: 587)
+
+
+Started GET "/users" for ::1 at 2021-04-29 08:42:38 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.2ms | Allocations: 603)
+
+
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started POST "/registrations" for ::1 at 2021-04-29 08:45:52 -0400
+Processing by RegistrationsController#create as JSON
+  Parameters: {"name"=>"Gabriel Joseph", "email"=>"gabe@gmail.com", "username"=>"Gabe", "password"=>"[FILTERED]", "registration"=>{"name"=>"Gabriel Joseph", "email"=>"gabe@gmail.com", "username"=>"Gabe", "password"=>"[FILTERED]"}}
+Started POST "/sessions" for ::1 at 2021-04-29 08:45:52 -0400
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"Gabe", "password"=>"[FILTERED]", "session"=>{"email"=>"Gabe", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "Gabe"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 768)
+
+
+  ↳ app/controllers/registrations_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/registrations_controller.rb:4:in `create'
+  [1m[36mUser Create (1.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "username", "email", "password_digest", "phone", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Gabriel Joseph"], ["username", "Gabe"], ["email", "gabe@gmail.com"], ["password_digest", "$2a$12$s/DYzHrPtt9TcOGcZP7xsOuaTIdnZBMmthoYNq7m9aVb9Z39/6xu."], ["phone", "12057079943"], ["created_at", "2021-04-29 12:45:52.505907"], ["updated_at", "2021-04-29 12:45:52.505907"]]
+  ↳ app/controllers/registrations_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/registrations_controller.rb:4:in `create'
+Completed 200 OK in 308ms (Views: 0.5ms | ActiveRecord: 3.7ms | Allocations: 7993)
+
+
+Started GET "/users" for ::1 at 2021-04-29 08:45:52 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms | Allocations: 782)
+
+
+Started GET "/users" for ::1 at 2021-04-29 08:46:41 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms | Allocations: 747)
+
+
+Started GET "/users" for ::1 at 2021-04-29 08:47:17 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 747)
+
+
+Started GET "/users" for ::1 at 2021-04-29 08:48:00 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms | Allocations: 747)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started POST "/sessions" for ::1 at 2021-04-29 08:50:59 -0400
+Processing by SessionsController#create as JSON
+Started GET "/users" for ::1 at 2021-04-29 08:51:00 -0400
+  Parameters: {"email"=>"gabe@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"gabe@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gabe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 200 OK in 306ms (Views: 0.8ms | ActiveRecord: 1.2ms | Allocations: 6160)
+
+
+Processing by UsersController#index as */*
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 1.0ms | Allocations: 6181)
+
+
+Started GET "/users" for ::1 at 2021-04-29 08:51:00 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms | Allocations: 747)
+
+
+Started POST "/" for ::1 at 2021-04-29 08:51:21 -0400
+Processing by TextsController#create as JSON
+  Parameters: {"body"=>"Test text 11", "phone"=>"9737044721", "user"=>1, "text"=>{"body"=>"Test text 11"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/texts_controller.rb:47:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:47:in `create'
+  [1m[36mText Create (0.5ms)[0m  [1m[32mINSERT INTO "texts" ("body", "to", "from", "direction", "sid", "account_sid", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["body", "Test text 11"], ["to", "+19737044721"], ["from", "+12057079943"], ["direction", "outbound-api"], ["sid", "SMad1d41547907490c9f322b962eedc5c3"], ["account_sid", "AC1d680d7cf7bbc779eb15ded8a720a71b"], ["user_id", 1], ["created_at", "2021-04-29 12:52:10.021162"], ["updated_at", "2021-04-29 12:52:10.021162"]]
+  ↳ app/controllers/texts_controller.rb:47:in `create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/texts_controller.rb:47:in `create'
+Completed 201 Created in 48152ms (Views: 0.9ms | ActiveRecord: 3.2ms | Allocations: 38173)
+
+
+Started POST "/" for ::1 at 2021-04-29 08:53:53 -0400
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TextsController#create as JSON
+  Parameters: {"body"=>"Test text 11", "phone"=>"9737044721", "user"=>1, "text"=>{"body"=>"Test text 11"}}
+Started GET "/users" for ::1 at 2021-04-29 08:53:53 -0400
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/texts_controller.rb:46:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:46:in `create'
+  [1m[36mText Create (0.4ms)[0m  [1m[32mINSERT INTO "texts" ("body", "to", "from", "direction", "sid", "account_sid", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["body", "Test text 11"], ["to", "+19737044721"], ["from", "+12057079943"], ["direction", "outbound-api"], ["sid", "SMc596de7615d9422ebff92943e81d2029"], ["account_sid", "AC1d680d7cf7bbc779eb15ded8a720a71b"], ["user_id", 1], ["created_at", "2021-04-29 12:54:43.816170"], ["updated_at", "2021-04-29 12:54:43.816170"]]
+  ↳ app/controllers/texts_controller.rb:46:in `create'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/texts_controller.rb:46:in `create'
+Completed 201 Created in 50481ms (Views: 0.6ms | ActiveRecord: 5.5ms | Allocations: 28623)
+
+
+Processing by UsersController#index as */*
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 1.1ms | Allocations: 6157)
+
+
+Started POST "/" for ::1 at 2021-04-29 08:55:40 -0400
+Processing by TextsController#create as JSON
+  Parameters: {"body"=>"Test text 13", "phone"=>"9737044721", "user"=>1, "text"=>{"body"=>"Test text 13"}}
+Started GET "/users" for ::1 at 2021-04-29 08:55:41 -0400
+Processing by UsersController#index as */*
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.5ms | Allocations: 1329)
+
+
+Started POST "/" for ::1 at 2021-04-29 08:55:51 -0400
+Processing by TextsController#create as JSON
+  Parameters: {"body"=>"Test text 13", "phone"=>"9737044721", "user"=>1, "text"=>{"body"=>"Test text 13"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."phone" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ (pry):3:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/texts_controller.rb:20:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."phone" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ (pry):6:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/texts_controller.rb:46:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:46:in `create'
+  [1m[36mText Create (0.7ms)[0m  [1m[32mINSERT INTO "texts" ("body", "to", "from", "direction", "sid", "account_sid", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["body", "Test text 13"], ["to", "+19737044721"], ["from", "+12057079943"], ["direction", "outbound-api"], ["sid", "SM691c06ff964944da991fbb98b8fd8863"], ["account_sid", "AC1d680d7cf7bbc779eb15ded8a720a71b"], ["user_id", 1], ["created_at", "2021-04-29 12:58:39.980614"], ["updated_at", "2021-04-29 12:58:39.980614"]]
+  ↳ app/controllers/texts_controller.rb:46:in `create'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/texts_controller.rb:46:in `create'
+Completed 201 Created in 168953ms (Views: 0.9ms | ActiveRecord: 3.5ms | Allocations: 41940)
+
+
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/texts_controller.rb:46:in `create'
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:46:in `create'
+  [1m[36mText Create (0.8ms)[0m  [1m[32mINSERT INTO "texts" ("body", "to", "from", "direction", "sid", "account_sid", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["body", "Test text 13"], ["to", "+19737044721"], ["from", "+12057079943"], ["direction", "outbound-api"], ["sid", "SM6c1edfefc8a94312a4bd8967f8e7eeec"], ["account_sid", "AC1d680d7cf7bbc779eb15ded8a720a71b"], ["user_id", 1], ["created_at", "2021-04-29 12:59:17.227772"], ["updated_at", "2021-04-29 12:59:17.227772"]]
+  ↳ app/controllers/texts_controller.rb:46:in `create'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/texts_controller.rb:46:in `create'
+Completed 201 Created in 216408ms (Views: 0.6ms | ActiveRecord: 4.0ms | Allocations: 58293)
+
+
+Started GET "/users" for ::1 at 2021-04-29 08:59:44 -0400
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 48ms (Views: 24.7ms | ActiveRecord: 3.3ms | Allocations: 8639)
+
+
+Started POST "/sessions" for ::1 at 2021-04-29 08:59:56 -0400
+Started GET "/users" for ::1 at 2021-04-29 08:59:56 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.3ms | Allocations: 1005)
+
+
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"gabe@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"gabe@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gabe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 200 OK in 291ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 1180)
+
+
+Started GET "/users" for ::1 at 2021-04-29 08:59:57 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 765)
+
+
+Started POST "/" for ::1 at 2021-04-29 09:00:04 -0400
+Processing by TextsController#create as JSON
+  Parameters: {"body"=>"Test text 13", "phone"=>"9737044721", "user"=>1, "text"=>{"body"=>"Test text 13"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/texts_controller.rb:46:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:46:in `create'
+  [1m[36mText Create (0.6ms)[0m  [1m[32mINSERT INTO "texts" ("body", "to", "from", "direction", "sid", "account_sid", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["body", "Test text 13"], ["to", "+19737044721"], ["from", "+12057079943"], ["direction", "outbound-api"], ["sid", "SM31da5d819ceb4b63827e4ad991b74514"], ["account_sid", "AC1d680d7cf7bbc779eb15ded8a720a71b"], ["user_id", 1], ["created_at", "2021-04-29 13:00:04.852161"], ["updated_at", "2021-04-29 13:00:04.852161"]]
+  ↳ app/controllers/texts_controller.rb:46:in `create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/texts_controller.rb:46:in `create'
+Completed 201 Created in 388ms (Views: 1.0ms | ActiveRecord: 2.9ms | Allocations: 12033)
+
+
+Started POST "/" for 54.198.116.230 at 2021-04-29 09:03:27 -0400
+Processing by TextsController#create as */*
+  Parameters: {"ToCountry"=>"US", "ToState"=>"AL", "SmsMessageSid"=>"SM6e21d34c22da3df3b678633b1533e7a3", "NumMedia"=>"0", "ToCity"=>"BIRMINGHAM", "FromZip"=>"07105", "SmsSid"=>"SM6e21d34c22da3df3b678633b1533e7a3", "FromState"=>"NJ", "SmsStatus"=>"received", "FromCity"=>"NEWARK", "Body"=>"Gdsghh", "FromCountry"=>"US", "To"=>"+12057079943", "MessagingServiceSid"=>"MG2f65a05d6a745327179eb876a2e130fe", "ToZip"=>"35203", "NumSegments"=>"1", "MessageSid"=>"SM6e21d34c22da3df3b678633b1533e7a3", "AccountSid"=>"AC1d680d7cf7bbc779eb15ded8a720a71b", "From"=>"+19737044721", "ApiVersion"=>"2010-04-01"}
+Started POST "/" for 54.174.228.154 at 2021-04-29 09:03:42 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ (pry):2:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."phone" = ? LIMIT ?[0m  [["phone", "+12057079943"], ["LIMIT", 1]]
+  ↳ (pry):2:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/texts_controller.rb:22:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."phone" = ? LIMIT ?[0m  [["phone", "+19737044721"], ["LIMIT", 1]]
+  ↳ (pry):5:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/texts_controller.rb:22:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."phone" = ?[0m  [["phone", "+12057079943"]]
+  ↳ app/controllers/texts_controller.rb:22:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."phone" = ? LIMIT ?[0m  [["phone", "12057079943"], ["LIMIT", 1]]
+  ↳ (pry):11:in `create'
+Completed 422 Unprocessable Entity in 586534ms (Views: 9.8ms | ActiveRecord: 3.5ms | Allocations: 79499)
+
+
+Processing by TextsController#create as */*
+  Parameters: {"ToCountry"=>"US", "ErrorUrl"=>"http://calltrackingmetrics.ngrok.io", "ToState"=>"AL", "SmsMessageSid"=>"SM6e21d34c22da3df3b678633b1533e7a3", "ErrorCode"=>"11200", "NumMedia"=>"0", "ToCity"=>"BIRMINGHAM", "FromZip"=>"07105", "SmsSid"=>"SM6e21d34c22da3df3b678633b1533e7a3", "FromState"=>"NJ", "SmsStatus"=>"received", "FromCity"=>"NEWARK", "Body"=>"Gdsghh", "FromCountry"=>"US", "To"=>"+12057079943", "MessagingServiceSid"=>"MG2f65a05d6a745327179eb876a2e130fe", "ToZip"=>"35203", "NumSegments"=>"1", "MessageSid"=>"SM6e21d34c22da3df3b678633b1533e7a3", "AccountSid"=>"AC1d680d7cf7bbc779eb15ded8a720a71b", "From"=>"+19737044721", "ApiVersion"=>"2010-04-01"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/texts_controller.rb:22:in `create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."phone" = ? LIMIT ?[0m  [["phone", "12057079943"], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:22:in `create'
+Completed 422 Unprocessable Entity in 18ms (Views: 0.6ms | ActiveRecord: 1.4ms | Allocations: 12625)
+
+
+Started GET "/users" for ::1 at 2021-04-29 09:13:55 -0400
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 20ms (Views: 9.6ms | ActiveRecord: 1.1ms | Allocations: 8515)
+
+
+Started POST "/sessions" for ::1 at 2021-04-29 09:14:06 -0400
+Started GET "/users" for ::1 at 2021-04-29 09:14:06 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.3ms | Allocations: 868)
+
+
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"gabe@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"gabe@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gabe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 200 OK in 288ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 1180)
+
+
+Started GET "/users" for ::1 at 2021-04-29 09:14:07 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 765)
+
+
+Started POST "/" for ::1 at 2021-04-29 09:14:15 -0400
+Processing by TextsController#create as JSON
+  Parameters: {"body"=>"Test text 13", "phone"=>"9737044721", "user"=>1, "text"=>{"body"=>"Test text 13"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/texts_controller.rb:47:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:47:in `create'
+  [1m[36mText Create (0.7ms)[0m  [1m[32mINSERT INTO "texts" ("body", "to", "from", "direction", "sid", "account_sid", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["body", "Test text 13"], ["to", "+19737044721"], ["from", "+12057079943"], ["direction", "outbound-api"], ["sid", "SMe6cf0394111a4ce8a959202c457283ae"], ["account_sid", "AC1d680d7cf7bbc779eb15ded8a720a71b"], ["user_id", 1], ["created_at", "2021-04-29 13:14:15.680917"], ["updated_at", "2021-04-29 13:14:15.680917"]]
+  ↳ app/controllers/texts_controller.rb:47:in `create'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/texts_controller.rb:47:in `create'
+Completed 201 Created in 339ms (Views: 1.0ms | ActiveRecord: 3.6ms | Allocations: 12034)
+
+
+Started POST "/" for 52.87.199.233 at 2021-04-29 09:14:39 -0400
+Processing by TextsController#create as */*
+  Parameters: {"ToCountry"=>"US", "ToState"=>"AL", "SmsMessageSid"=>"SMe75e0d692cef4b7fd546ab91d8f1afb8", "NumMedia"=>"0", "ToCity"=>"BIRMINGHAM", "FromZip"=>"07105", "SmsSid"=>"SMe75e0d692cef4b7fd546ab91d8f1afb8", "FromState"=>"NJ", "SmsStatus"=>"received", "FromCity"=>"NEWARK", "Body"=>"Ggghjkoyg", "FromCountry"=>"US", "To"=>"+12057079943", "MessagingServiceSid"=>"MG2f65a05d6a745327179eb876a2e130fe", "ToZip"=>"35203", "NumSegments"=>"1", "MessageSid"=>"SMe75e0d692cef4b7fd546ab91d8f1afb8", "AccountSid"=>"AC1d680d7cf7bbc779eb15ded8a720a71b", "From"=>"+19737044721", "ApiVersion"=>"2010-04-01"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."phone" = ? LIMIT ?[0m  [["phone", "12057079943"], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:22:in `create'
+Completed 422 Unprocessable Entity in 12ms (Views: 8.7ms | ActiveRecord: 0.3ms | Allocations: 3829)
+
+
+Started POST "/" for 18.232.81.204 at 2021-04-29 09:14:40 -0400
+Processing by TextsController#create as */*
+  Parameters: {"ToCountry"=>"US", "ErrorUrl"=>"http://calltrackingmetrics.ngrok.io", "ToState"=>"AL", "SmsMessageSid"=>"SMe75e0d692cef4b7fd546ab91d8f1afb8", "ErrorCode"=>"11200", "NumMedia"=>"0", "ToCity"=>"BIRMINGHAM", "FromZip"=>"07105", "SmsSid"=>"SMe75e0d692cef4b7fd546ab91d8f1afb8", "FromState"=>"NJ", "SmsStatus"=>"received", "FromCity"=>"NEWARK", "Body"=>"Ggghjkoyg", "FromCountry"=>"US", "To"=>"+12057079943", "MessagingServiceSid"=>"MG2f65a05d6a745327179eb876a2e130fe", "ToZip"=>"35203", "NumSegments"=>"1", "MessageSid"=>"SMe75e0d692cef4b7fd546ab91d8f1afb8", "AccountSid"=>"AC1d680d7cf7bbc779eb15ded8a720a71b", "From"=>"+19737044721", "ApiVersion"=>"2010-04-01"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."phone" = ? LIMIT ?[0m  [["phone", "12057079943"], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:22:in `create'
+Completed 422 Unprocessable Entity in 4ms (Views: 1.2ms | ActiveRecord: 0.3ms | Allocations: 1003)
+
+
+Started POST "/" for 52.91.78.195 at 2021-04-29 09:15:01 -0400
+Processing by TextsController#create as */*
+  Parameters: {"ToCountry"=>"US", "ToState"=>"AL", "SmsMessageSid"=>"SM360d9b7cfff8c47406fe22d7006435bb", "NumMedia"=>"0", "ToCity"=>"BIRMINGHAM", "FromZip"=>"07105", "SmsSid"=>"SM360d9b7cfff8c47406fe22d7006435bb", "FromState"=>"NJ", "SmsStatus"=>"received", "FromCity"=>"NEWARK", "Body"=>"D f htrg", "FromCountry"=>"US", "To"=>"+12057079943", "MessagingServiceSid"=>"MG2f65a05d6a745327179eb876a2e130fe", "ToZip"=>"35203", "NumSegments"=>"1", "MessageSid"=>"SM360d9b7cfff8c47406fe22d7006435bb", "AccountSid"=>"AC1d680d7cf7bbc779eb15ded8a720a71b", "From"=>"+19737044721", "ApiVersion"=>"2010-04-01"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/texts_controller.rb:22:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."phone" = ? LIMIT ?[0m  [["phone", "12057079943"], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:22:in `create'
+Started POST "/" for 3.87.224.114 at 2021-04-29 09:15:16 -0400
+Completed 422 Unprocessable Entity in 988140ms (Views: 1.3ms | ActiveRecord: 2.0ms | Allocations: 67430)
+
+
+Processing by TextsController#create as */*
+  Parameters: {"ToCountry"=>"US", "ErrorUrl"=>"http://calltrackingmetrics.ngrok.io", "ToState"=>"AL", "SmsMessageSid"=>"SM360d9b7cfff8c47406fe22d7006435bb", "ErrorCode"=>"11200", "NumMedia"=>"0", "ToCity"=>"BIRMINGHAM", "FromZip"=>"07105", "SmsSid"=>"SM360d9b7cfff8c47406fe22d7006435bb", "FromState"=>"NJ", "SmsStatus"=>"received", "FromCity"=>"NEWARK", "Body"=>"D f htrg", "FromCountry"=>"US", "To"=>"+12057079943", "MessagingServiceSid"=>"MG2f65a05d6a745327179eb876a2e130fe", "ToZip"=>"35203", "NumSegments"=>"1", "MessageSid"=>"SM360d9b7cfff8c47406fe22d7006435bb", "AccountSid"=>"AC1d680d7cf7bbc779eb15ded8a720a71b", "From"=>"+19737044721", "ApiVersion"=>"2010-04-01"}
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/texts_controller.rb:29:in `create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."phone" = ? LIMIT ?[0m  [["phone", "12057079943"], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:29:in `create'
+Completed 422 Unprocessable Entity in 21ms (Views: 0.7ms | ActiveRecord: 1.7ms | Allocations: 12612)
+
+
+Started POST "/" for 18.215.250.214 at 2021-04-29 09:31:59 -0400
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TextsController#create as */*
+  Parameters: {"ToCountry"=>"US", "ToState"=>"AL", "SmsMessageSid"=>"SM174265409b14df6318ba091fc381544b", "NumMedia"=>"0", "ToCity"=>"BIRMINGHAM", "FromZip"=>"07105", "SmsSid"=>"SM174265409b14df6318ba091fc381544b", "FromState"=>"NJ", "SmsStatus"=>"received", "FromCity"=>"NEWARK", "Body"=>"Ggdvbj", "FromCountry"=>"US", "To"=>"+12057079943", "MessagingServiceSid"=>"MG2f65a05d6a745327179eb876a2e130fe", "ToZip"=>"35203", "NumSegments"=>"1", "MessageSid"=>"SM174265409b14df6318ba091fc381544b", "AccountSid"=>"AC1d680d7cf7bbc779eb15ded8a720a71b", "From"=>"+19737044721", "ApiVersion"=>"2010-04-01"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."phone" = ? LIMIT ?[0m  [["phone", "12057079943"], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:29:in `create'
+Completed 422 Unprocessable Entity in 49ms (Views: 7.4ms | ActiveRecord: 1.3ms | Allocations: 20330)
+
+
+Started POST "/" for 54.81.87.58 at 2021-04-29 09:31:59 -0400
+Processing by TextsController#create as */*
+  Parameters: {"ToCountry"=>"US", "ErrorUrl"=>"http://calltrackingmetrics.ngrok.io", "ToState"=>"AL", "SmsMessageSid"=>"SM174265409b14df6318ba091fc381544b", "ErrorCode"=>"11200", "NumMedia"=>"0", "ToCity"=>"BIRMINGHAM", "FromZip"=>"07105", "SmsSid"=>"SM174265409b14df6318ba091fc381544b", "FromState"=>"NJ", "SmsStatus"=>"received", "FromCity"=>"NEWARK", "Body"=>"Ggdvbj", "FromCountry"=>"US", "To"=>"+12057079943", "MessagingServiceSid"=>"MG2f65a05d6a745327179eb876a2e130fe", "ToZip"=>"35203", "NumSegments"=>"1", "MessageSid"=>"SM174265409b14df6318ba091fc381544b", "AccountSid"=>"AC1d680d7cf7bbc779eb15ded8a720a71b", "From"=>"+19737044721", "ApiVersion"=>"2010-04-01"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."phone" = ? LIMIT ?[0m  [["phone", "12057079943"], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:29:in `create'
+Completed 422 Unprocessable Entity in 4ms (Views: 0.9ms | ActiveRecord: 0.2ms | Allocations: 1047)
+
+
+Started POST "/" for 54.173.115.63 at 2021-04-29 09:32:25 -0400
+Processing by TextsController#create as */*
+  Parameters: {"ToCountry"=>"US", "ToState"=>"AL", "SmsMessageSid"=>"SM31ffe2ce36ae2981c8b1fa7bb9be5332", "NumMedia"=>"0", "ToCity"=>"BIRMINGHAM", "FromZip"=>"07105", "SmsSid"=>"SM31ffe2ce36ae2981c8b1fa7bb9be5332", "FromState"=>"NJ", "SmsStatus"=>"received", "FromCity"=>"NEWARK", "Body"=>"Dfgu", "FromCountry"=>"US", "To"=>"+12057079943", "MessagingServiceSid"=>"MG2f65a05d6a745327179eb876a2e130fe", "ToZip"=>"35203", "NumSegments"=>"1", "MessageSid"=>"SM31ffe2ce36ae2981c8b1fa7bb9be5332", "AccountSid"=>"AC1d680d7cf7bbc779eb15ded8a720a71b", "From"=>"+19737044721", "ApiVersion"=>"2010-04-01"}
+Started POST "/" for 34.229.13.48 at 2021-04-29 09:32:40 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ (pry):9:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."phone" = ? LIMIT ?[0m  [["phone", "12057079943"], ["LIMIT", 1]]
+  ↳ (pry):9:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."phone" = ? LIMIT ?[0m  [["phone", "12057079943"], ["LIMIT", 1]]
+  ↳ (pry):11:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."phone" = ? LIMIT ?[0m  [["phone", "12057079943"], ["LIMIT", 1]]
+  ↳ (pry):12:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."phone" = ? LIMIT ?[0m  [["phone", "12057079943"], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:30:in `create'
+Completed 422 Unprocessable Entity in 59610ms (Views: 1.5ms | ActiveRecord: 2.8ms | Allocations: 61172)
+
+
+Processing by TextsController#create as */*
+  Parameters: {"ToCountry"=>"US", "ErrorUrl"=>"http://calltrackingmetrics.ngrok.io", "ToState"=>"AL", "SmsMessageSid"=>"SM31ffe2ce36ae2981c8b1fa7bb9be5332", "ErrorCode"=>"11200", "NumMedia"=>"0", "ToCity"=>"BIRMINGHAM", "FromZip"=>"07105", "SmsSid"=>"SM31ffe2ce36ae2981c8b1fa7bb9be5332", "FromState"=>"NJ", "SmsStatus"=>"received", "FromCity"=>"NEWARK", "Body"=>"Dfgu", "FromCountry"=>"US", "To"=>"+12057079943", "MessagingServiceSid"=>"MG2f65a05d6a745327179eb876a2e130fe", "ToZip"=>"35203", "NumSegments"=>"1", "MessageSid"=>"SM31ffe2ce36ae2981c8b1fa7bb9be5332", "AccountSid"=>"AC1d680d7cf7bbc779eb15ded8a720a71b", "From"=>"+19737044721", "ApiVersion"=>"2010-04-01"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/texts_controller.rb:30:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."phone" = ? LIMIT ?[0m  [["phone", "12057079943"], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:30:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/texts_controller.rb:46:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:46:in `create'
+  [1m[36mText Create (0.5ms)[0m  [1m[32mINSERT INTO "texts" ("body", "messaging_service_sid", "to", "from", "direction", "sid", "account_sid", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["body", "Dfgu"], ["messaging_service_sid", "MG2f65a05d6a745327179eb876a2e130fe"], ["to", "+12057079943"], ["from", "+19737044721"], ["direction", "Incoming"], ["sid", "SM31ffe2ce36ae2981c8b1fa7bb9be5332"], ["account_sid", "AC1d680d7cf7bbc779eb15ded8a720a71b"], ["user_id", 1], ["created_at", "2021-04-29 13:33:27.067794"], ["updated_at", "2021-04-29 13:33:27.067794"]]
+  ↳ app/controllers/texts_controller.rb:46:in `create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/texts_controller.rb:46:in `create'
+Completed 201 Created in 1885ms (Views: 0.9ms | ActiveRecord: 3.6ms | Allocations: 24266)
+
+
+Started POST "/" for 107.22.159.7 at 2021-04-29 09:33:36 -0400
+Processing by TextsController#create as */*
+  Parameters: {"ToCountry"=>"US", "ToState"=>"AL", "SmsMessageSid"=>"SM82822f80c9a611dbc5b1b2b99263503c", "NumMedia"=>"0", "ToCity"=>"BIRMINGHAM", "FromZip"=>"07105", "SmsSid"=>"SM82822f80c9a611dbc5b1b2b99263503c", "FromState"=>"NJ", "SmsStatus"=>"received", "FromCity"=>"NEWARK", "Body"=>"Ffrui", "FromCountry"=>"US", "To"=>"+12057079943", "MessagingServiceSid"=>"MG2f65a05d6a745327179eb876a2e130fe", "ToZip"=>"35203", "NumSegments"=>"1", "MessageSid"=>"SM82822f80c9a611dbc5b1b2b99263503c", "AccountSid"=>"AC1d680d7cf7bbc779eb15ded8a720a71b", "From"=>"+19737044721", "ApiVersion"=>"2010-04-01"}
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/texts_controller.rb:29:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."phone" = ? LIMIT ?[0m  [["phone", "12057079943"], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:29:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/texts_controller.rb:45:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:45:in `create'
+  [1m[36mText Create (0.4ms)[0m  [1m[32mINSERT INTO "texts" ("body", "messaging_service_sid", "to", "from", "direction", "sid", "account_sid", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["body", "Ffrui"], ["messaging_service_sid", "MG2f65a05d6a745327179eb876a2e130fe"], ["to", "+12057079943"], ["from", "+19737044721"], ["direction", "Incoming"], ["sid", "SM82822f80c9a611dbc5b1b2b99263503c"], ["account_sid", "AC1d680d7cf7bbc779eb15ded8a720a71b"], ["user_id", 1], ["created_at", "2021-04-29 13:33:36.092130"], ["updated_at", "2021-04-29 13:33:36.092130"]]
+  ↳ app/controllers/texts_controller.rb:45:in `create'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/texts_controller.rb:45:in `create'
+Completed 201 Created in 22ms (Views: 0.5ms | ActiveRecord: 3.3ms | Allocations: 14939)
+
+
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mText Load (0.3ms)[0m  [1m[34mSELECT "texts".* FROM "texts" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
