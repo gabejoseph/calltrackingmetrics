@@ -4729,3 +4729,77 @@ Processing by TextsController#index as */*
 Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.2ms | Allocations: 2800)
 
 
+Started GET "/" for ::1 at 2021-04-29 16:57:47 -0400
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TextsController#index as */*
+  [1m[36mText Load (0.8ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE ("texts"."to" = ? OR "texts"."from" = ?)[0m  [["to", "+12057079943"], ["from", "+12057079943"]]
+  ↳ app/controllers/texts_controller.rb:10:in `index'
+Completed 200 OK in 43ms (Views: 17.1ms | ActiveRecord: 2.0ms | Allocations: 13411)
+
+
+Started POST "/" for 54.197.72.163 at 2021-04-29 16:58:22 -0400
+Processing by TextsController#create as */*
+  Parameters: {"ToCountry"=>"US", "ToState"=>"AL", "SmsMessageSid"=>"SM690e140cde0804f5a2552daf9a6a2bfe", "NumMedia"=>"0", "ToCity"=>"BIRMINGHAM", "FromZip"=>"07105", "SmsSid"=>"SM690e140cde0804f5a2552daf9a6a2bfe", "FromState"=>"NJ", "SmsStatus"=>"received", "FromCity"=>"NEWARK", "Body"=>"Hdhchidowmw", "FromCountry"=>"US", "To"=>"+12057079943", "MessagingServiceSid"=>"MG2f65a05d6a745327179eb876a2e130fe", "ToZip"=>"35203", "NumSegments"=>"1", "MessageSid"=>"SM690e140cde0804f5a2552daf9a6a2bfe", "AccountSid"=>"AC1d680d7cf7bbc779eb15ded8a720a71b", "From"=>"+19737044721", "ApiVersion"=>"2010-04-01"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."phone" = ? LIMIT ?[0m  [["phone", "12057079943"], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:29:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/texts_controller.rb:45:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:45:in `create'
+  [1m[36mText Create (1.2ms)[0m  [1m[32mINSERT INTO "texts" ("body", "messaging_service_sid", "to", "from", "direction", "sid", "account_sid", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["body", "Hdhchidowmw"], ["messaging_service_sid", "MG2f65a05d6a745327179eb876a2e130fe"], ["to", "+12057079943"], ["from", "+19737044721"], ["direction", "Incoming"], ["sid", "SM690e140cde0804f5a2552daf9a6a2bfe"], ["account_sid", "AC1d680d7cf7bbc779eb15ded8a720a71b"], ["user_id", 1], ["created_at", "2021-04-29 20:58:22.236507"], ["updated_at", "2021-04-29 20:58:22.236507"]]
+  ↳ app/controllers/texts_controller.rb:45:in `create'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/texts_controller.rb:45:in `create'
+Completed 201 Created in 65ms (Views: 0.7ms | ActiveRecord: 4.5ms | Allocations: 41335)
+
+
+Started GET "/" for ::1 at 2021-04-29 16:58:43 -0400
+Processing by TextsController#index as */*
+  [1m[36mText Load (0.5ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE ("texts"."to" = ? OR "texts"."from" = ?)[0m  [["to", "+12057079943"], ["from", "+12057079943"]]
+  ↳ app/controllers/texts_controller.rb:10:in `index'
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.5ms | Allocations: 3016)
+
+
+Started POST "/" for ::1 at 2021-04-29 17:03:14 -0400
+Processing by TextsController#create as JSON
+  Parameters: {"body"=>"newtextoaindaowin", "phone"=>"9737044721", "user"=>1, "text"=>{"body"=>"newtextoaindaowin"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/texts_controller.rb:45:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:45:in `create'
+  [1m[36mText Create (0.5ms)[0m  [1m[32mINSERT INTO "texts" ("body", "to", "from", "direction", "sid", "account_sid", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["body", "newtextoaindaowin"], ["to", "+19737044721"], ["from", "+12057079943"], ["direction", "outbound-api"], ["sid", "SM641a952b96d24e50b0787ebd06d44626"], ["account_sid", "AC1d680d7cf7bbc779eb15ded8a720a71b"], ["user_id", 1], ["created_at", "2021-04-29 21:03:14.463184"], ["updated_at", "2021-04-29 21:03:14.463184"]]
+  ↳ app/controllers/texts_controller.rb:45:in `create'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/texts_controller.rb:45:in `create'
+Completed 201 Created in 334ms (Views: 0.5ms | ActiveRecord: 1.9ms | Allocations: 17150)
+
+
+Started GET "/" for ::1 at 2021-04-29 17:03:14 -0400
+Processing by TextsController#index as */*
+  [1m[36mText Load (0.3ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE ("texts"."to" = ? OR "texts"."from" = ?)[0m  [["to", "+12057079943"], ["from", "+12057079943"]]
+  ↳ app/controllers/texts_controller.rb:10:in `index'
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.3ms | Allocations: 3204)
+
+
+Started GET "/" for ::1 at 2021-04-29 17:04:47 -0400
+Processing by TextsController#index as */*
+  [1m[36mText Load (0.2ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE ("texts"."to" = ? OR "texts"."from" = ?)[0m  [["to", "+12057079943"], ["from", "+12057079943"]]
+  ↳ app/controllers/texts_controller.rb:10:in `index'
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.2ms | Allocations: 3185)
+
+
+Started GET "/" for ::1 at 2021-04-29 17:08:51 -0400
+Processing by TextsController#index as */*
+  [1m[36mText Load (0.2ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE ("texts"."to" = ? OR "texts"."from" = ?)[0m  [["to", "+12057079943"], ["from", "+12057079943"]]
+  ↳ app/controllers/texts_controller.rb:10:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.2ms | Allocations: 3204)
+
+
+Started GET "/" for ::1 at 2021-04-29 17:10:43 -0400
+Processing by TextsController#index as */*
+  [1m[36mText Load (0.4ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE ("texts"."to" = ? OR "texts"."from" = ?)[0m  [["to", "+12057079943"], ["from", "+12057079943"]]
+  ↳ app/controllers/texts_controller.rb:10:in `index'
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.4ms | Allocations: 3185)
+
+
