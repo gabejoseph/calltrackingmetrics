@@ -4414,3 +4414,54 @@ Processing by TextsController#index as */*
 Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms | Allocations: 2236)
 
 
+Started GET "/" for ::1 at 2021-04-29 14:00:11 -0400
+Processing by TextsController#index as */*
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/texts_controller.rb:10:in `index'
+  [1m[36mText Load (0.3ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE ("texts"."to" = ? OR "texts"."from" = ?)[0m  [["to", "+12057079943"], ["from", "+12057079943"]]
+  ↳ app/controllers/texts_controller.rb:10:in `index'
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.6ms | Allocations: 2825)
+
+
+Started GET "/" for ::1 at 2021-04-29 14:00:45 -0400
+Processing by TextsController#index as */*
+  [1m[36mText Load (0.3ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE ("texts"."to" = ? OR "texts"."from" = ?)[0m  [["to", "+12057079943"], ["from", "+12057079943"]]
+  ↳ app/controllers/texts_controller.rb:10:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.3ms | Allocations: 2236)
+
+
+Started GET "/" for ::1 at 2021-04-29 14:01:01 -0400
+Processing by TextsController#index as */*
+  [1m[36mText Load (0.2ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE ("texts"."to" = ? OR "texts"."from" = ?)[0m  [["to", "+12057079943"], ["from", "+12057079943"]]
+  ↳ app/controllers/texts_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.2ms | Allocations: 2236)
+
+
+Started GET "/" for ::1 at 2021-04-29 14:01:53 -0400
+Processing by TextsController#index as */*
+  [1m[36mText Load (0.2ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE ("texts"."to" = ? OR "texts"."from" = ?)[0m  [["to", "+12057079943"], ["from", "+12057079943"]]
+  ↳ app/controllers/texts_controller.rb:10:in `index'
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.2ms | Allocations: 2236)
+
+
+Started GET "/" for ::1 at 2021-04-29 14:02:37 -0400
+Processing by TextsController#index as */*
+  [1m[36mText Load (0.3ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE ("texts"."to" = ? OR "texts"."from" = ?)[0m  [["to", "+12057079943"], ["from", "+12057079943"]]
+  ↳ app/controllers/texts_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms | Allocations: 2236)
+
+
+Started GET "/" for ::1 at 2021-04-29 14:04:52 -0400
+Processing by TextsController#index as */*
+  [1m[36mText Load (0.2ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE ("texts"."to" = ? OR "texts"."from" = ?)[0m  [["to", "+12057079943"], ["from", "+12057079943"]]
+  ↳ app/controllers/texts_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms | Allocations: 2236)
+
+
+Started GET "/" for ::1 at 2021-04-29 14:05:15 -0400
+Processing by TextsController#index as */*
+  [1m[36mText Load (0.2ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE ("texts"."to" = ? OR "texts"."from" = ?)[0m  [["to", "+12057079943"], ["from", "+12057079943"]]
+  ↳ app/controllers/texts_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 2236)
+
+
