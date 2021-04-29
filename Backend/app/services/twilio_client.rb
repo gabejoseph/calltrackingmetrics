@@ -11,9 +11,9 @@ class TwilioClient
         @client.messages.list
     end
 
-    def send_text(user, message)
+    def send_text(phone, message)
         client.messages.create(
-            to: user.phone,
+            to: phone,
             from: phone_number, 
             body: message
         )

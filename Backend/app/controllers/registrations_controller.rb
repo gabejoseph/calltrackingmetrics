@@ -2,11 +2,12 @@ class RegistrationsController < ApplicationController
 
     def create 
         user = User.create(
+            id: Rails.application.credentials.twilio[:phone_number]
             name: params[:name],
             email: params[:email],
             password: params[:password],
             username: params[:username], 
-            phone: params[:phone]
+            phone: Rails.application.credentials.twilio[:phone_number]
         )
 
         if user 
