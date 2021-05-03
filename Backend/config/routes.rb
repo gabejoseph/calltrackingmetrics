@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  resources :texts
-  resources :users
 
   get '/', to: 'texts#index'
   post '/', to: 'texts#create'
