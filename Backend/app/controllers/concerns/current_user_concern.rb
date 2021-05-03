@@ -1,3 +1,4 @@
+require 'pry'
 module CurrentUserConcern
     extend ActiveSupport::Concern
 
@@ -26,6 +27,7 @@ module CurrentUserConcern
 
 
     def logout 
+        binding.pry
         reset_session
         render json: { status: 200, logged_out: true }
     end 

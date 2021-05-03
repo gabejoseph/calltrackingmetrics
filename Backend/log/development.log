@@ -5319,3 +5319,248 @@ Processing by TextsController#index as */*
 Completed 200 OK in 27ms (Views: 16.0ms | ActiveRecord: 2.6ms | Allocations: 11637)
 
 
+Started POST "/sessions" for ::1 at 2021-05-03 14:15:59 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"gabe@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"gabe@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gabe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 200 OK in 2461ms (Views: 1.1ms | ActiveRecord: 0.8ms | Allocations: 20931)
+
+
+Started GET "/" for ::1 at 2021-05-03 14:16:02 -0400
+Processing by TextsController#index as */*
+  [1m[36mText Load (0.3ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE ("texts"."to" = ? OR "texts"."from" = ?)[0m  [["to", "+12057079943"], ["from", "+12057079943"]]
+  ↳ app/controllers/texts_controller.rb:10:in `index'
+Completed 200 OK in 26ms (Views: 17.0ms | ActiveRecord: 1.1ms | Allocations: 11842)
+
+
+Started GET "/" for ::1 at 2021-05-03 14:16:46 -0400
+Processing by TextsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/texts_controller.rb:9:in `index'
+  [1m[36mText Load (0.2ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE ("texts"."to" = ? OR "texts"."from" = ?)[0m  [["to", "+12057079943"], ["from", "+12057079943"]]
+  ↳ app/controllers/texts_controller.rb:10:in `index'
+Completed 200 OK in 16ms (Views: 11.1ms | ActiveRecord: 1.3ms | Allocations: 11609)
+
+
+Started GET "/texts" for ::1 at 2021-05-03 14:16:49 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/texts"):
+  
+Started GET "/users" for ::1 at 2021-05-03 14:16:53 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/" for ::1 at 2021-05-03 14:16:55 -0400
+Processing by TextsController#index as HTML
+  [1m[36mText Load (0.3ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE ("texts"."to" = ? OR "texts"."from" = ?)[0m  [["to", "+12057079943"], ["from", "+12057079943"]]
+  ↳ app/controllers/texts_controller.rb:10:in `index'
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.3ms | Allocations: 4542)
+
+
+Started POST "/sessions" for ::1 at 2021-05-03 14:17:34 -0400
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"gabe@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"gabe@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gabe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 200 OK in 341ms (Views: 0.2ms | ActiveRecord: 1.9ms | Allocations: 5784)
+
+
+Started GET "/" for ::1 at 2021-05-03 14:17:35 -0400
+Processing by TextsController#index as */*
+  [1m[36mText Load (0.2ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE ("texts"."to" = ? OR "texts"."from" = ?)[0m  [["to", "+12057079943"], ["from", "+12057079943"]]
+  ↳ app/controllers/texts_controller.rb:10:in `index'
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.2ms | Allocations: 4527)
+
+
+Started GET "/" for ::1 at 2021-05-03 14:17:35 -0400
+Processing by TextsController#index as */*
+  [1m[36mText Load (0.2ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE ("texts"."to" = ? OR "texts"."from" = ?)[0m  [["to", "+12057079943"], ["from", "+12057079943"]]
+  ↳ app/controllers/texts_controller.rb:10:in `index'
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.2ms | Allocations: 4527)
+
+
+Started POST "/sessions" for ::1 at 2021-05-03 14:17:43 -0400
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"gabe@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"gabe@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gabe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 200 OK in 312ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 532)
+
+
+Started POST "/sessions" for ::1 at 2021-05-03 14:17:54 -0400
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"gabe@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"gabe@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gabe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 200 OK in 286ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 703)
+
+
+Started GET "/" for ::1 at 2021-05-03 14:17:54 -0400
+Processing by TextsController#index as */*
+  [1m[36mText Load (0.3ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE ("texts"."to" = ? OR "texts"."from" = ?)[0m  [["to", "+12057079943"], ["from", "+12057079943"]]
+  ↳ app/controllers/texts_controller.rb:10:in `index'
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.3ms | Allocations: 4528)
+
+
+Started POST "/sessions" for ::1 at 2021-05-03 14:18:01 -0400
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"gabe@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"gabe@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gabe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 200 OK in 287ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 531)
+
+
+Started GET "/" for ::1 at 2021-05-03 14:22:16 -0400
+Processing by TextsController#index as HTML
+  [1m[36mText Load (0.2ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE ("texts"."to" = ? OR "texts"."from" = ?)[0m  [["to", "+12057079943"], ["from", "+12057079943"]]
+  ↳ app/controllers/texts_controller.rb:10:in `index'
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.2ms | Allocations: 4524)
+
+
+Started DELETE "/" for ::1 at 2021-05-03 14:23:31 -0400
+  
+ActionController::RoutingError (No route matches [DELETE] "/"):
+  
+Started DELETE "/" for 2601:14a:c100:ba70:dd26:3fae:9724:731b at 2021-05-03 14:24:10 -0400
+  
+ActionController::RoutingError (No route matches [DELETE] "/"):
+  
+Started POST "/sessions" for ::1 at 2021-05-03 14:25:59 -0400
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"gabe@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"gabe@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gabe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 200 OK in 303ms (Views: 0.4ms | ActiveRecord: 2.4ms | Allocations: 6772)
+
+
+Started GET "/" for ::1 at 2021-05-03 14:26:00 -0400
+Processing by TextsController#index as */*
+  [1m[36mText Load (0.3ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE ("texts"."to" = ? OR "texts"."from" = ?)[0m  [["to", "+12057079943"], ["from", "+12057079943"]]
+  ↳ app/controllers/texts_controller.rb:10:in `index'
+Completed 200 OK in 15ms (Views: 11.2ms | ActiveRecord: 0.9ms | Allocations: 10725)
+
+
+Started POST "/sessions" for ::1 at 2021-05-03 14:26:10 -0400
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"gabe@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"gabe@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gabe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 200 OK in 292ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 531)
+
+
+Started POST "/sessions" for ::1 at 2021-05-03 14:27:05 -0400
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"gabe@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"gabe@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gabe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 200 OK in 295ms (Views: 0.4ms | ActiveRecord: 1.5ms | Allocations: 6731)
+
+
+Started GET "/" for ::1 at 2021-05-03 14:27:05 -0400
+Processing by TextsController#index as */*
+  [1m[36mText Load (0.2ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE ("texts"."to" = ? OR "texts"."from" = ?)[0m  [["to", "+12057079943"], ["from", "+12057079943"]]
+  ↳ app/controllers/texts_controller.rb:10:in `index'
+Completed 200 OK in 15ms (Views: 12.4ms | ActiveRecord: 0.8ms | Allocations: 10719)
+
+
+Started POST "/sessions" for ::1 at 2021-05-03 14:27:12 -0400
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"gabe@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"gabe@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gabe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 200 OK in 287ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 695)
+
+
+Started GET "/" for ::1 at 2021-05-03 14:27:12 -0400
+Processing by TextsController#index as */*
+  [1m[36mText Load (0.2ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE ("texts"."to" = ? OR "texts"."from" = ?)[0m  [["to", "+12057079943"], ["from", "+12057079943"]]
+  ↳ app/controllers/texts_controller.rb:10:in `index'
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.2ms | Allocations: 4528)
+
+
+Started POST "/sessions" for ::1 at 2021-05-03 14:27:17 -0400
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"gabe@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"gabe@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gabe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 200 OK in 288ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 532)
+
+
+Started POST "/sessions" for ::1 at 2021-05-03 14:31:57 -0400
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"gabe@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"gabe@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gabe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 200 OK in 291ms (Views: 0.4ms | ActiveRecord: 1.4ms | Allocations: 6774)
+
+
+Started GET "/" for ::1 at 2021-05-03 14:31:58 -0400
+Processing by TextsController#index as */*
+  [1m[36mText Load (0.2ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE ("texts"."to" = ? OR "texts"."from" = ?)[0m  [["to", "+12057079943"], ["from", "+12057079943"]]
+  ↳ app/controllers/texts_controller.rb:10:in `index'
+Completed 200 OK in 15ms (Views: 11.8ms | ActiveRecord: 0.8ms | Allocations: 10723)
+
+
+Started POST "/sessions" for ::1 at 2021-05-03 14:32:06 -0400
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"gabe@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"gabe@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gabe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 200 OK in 289ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 532)
+
+
+Started POST "/sessions" for ::1 at 2021-05-03 14:35:33 -0400
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"gabe@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"gabe@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gabe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 200 OK in 285ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 695)
+
+
+Started GET "/" for ::1 at 2021-05-03 14:35:34 -0400
+Processing by TextsController#index as */*
+  [1m[36mText Load (0.2ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE ("texts"."to" = ? OR "texts"."from" = ?)[0m  [["to", "+12057079943"], ["from", "+12057079943"]]
+  ↳ app/controllers/texts_controller.rb:10:in `index'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.2ms | Allocations: 4528)
+
+
+Started POST "/sessions" for ::1 at 2021-05-03 14:35:41 -0400
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"gabe@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"gabe@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gabe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 200 OK in 283ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 531)
+
+
+Started POST "/sessions" for ::1 at 2021-05-03 14:36:30 -0400
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"gabe@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"gabe@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gabe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 200 OK in 302ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 696)
+
+
+Started GET "/" for ::1 at 2021-05-03 14:36:31 -0400
+Processing by TextsController#index as */*
+  [1m[36mText Load (0.2ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE ("texts"."to" = ? OR "texts"."from" = ?)[0m  [["to", "+12057079943"], ["from", "+12057079943"]]
+  ↳ app/controllers/texts_controller.rb:10:in `index'
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.2ms | Allocations: 4528)
+
+
+Started POST "/sessions" for ::1 at 2021-05-03 14:36:51 -0400
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"gabe@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"gabe@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gabe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 200 OK in 294ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 531)
+
+
